@@ -16,7 +16,7 @@ body {
   clear: both; }
 
 h1.title {
-  font-size: 75px;
+  font-size: 80px;
   font-weight: bold;
   margin: 0;
   display: block;
@@ -50,7 +50,7 @@ h1.title {
   float: right;
   text-align: right; }
 
-.score-container, .best-container, .site-best-container {
+.score-container, .best-container {
   position: relative;
   display: inline-block;
   background: #bbada0;
@@ -63,40 +63,37 @@ h1.title {
   color: white;
   margin-top: 8px;
   text-align: center; }
-  .score-container:after, .best-container:after, .site-best-container:after {
-    position: absolute;
-    width: 100%;
-    top: 10px;
-    left: 0;
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 13px;
-    text-align: center;
-    color: #eee4da; }
-  .score-container .score-addition, .best-container .score-addition {
-    position: absolute;
-    right: 30px;
-    color: red;
-    font-size: 25px;
-    line-height: 25px;
-    font-weight: bold;
-    color: rgba(119, 110, 101, 0.9);
-    z-index: 100;
-    -webkit-animation: move-up 600ms ease-in;
-    -moz-animation: move-up 600ms ease-in;
-    animation: move-up 600ms ease-in;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; }
+.score-container:after, .best-container:after {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: #eee4da; }
+.score-container .score-addition, .best-container .score-addition {
+  position: absolute;
+  right: 30px;
+  color: red;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  color: rgba(119, 110, 101, 0.9);
+  z-index: 100;
+  -webkit-animation: move-up 600ms ease-in;
+  -moz-animation: move-up 600ms ease-in;
+  animation: move-up 600ms ease-in;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 .score-container:after {
   content: "Score"; }
 
 .best-container:after {
-  content: "Your Best"; }
-
-.site-best-container:after {
-  content: "Site Best"; }
+  content: "Best"; }
 
 p {
   margin-top: 0;
@@ -159,50 +156,50 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .game-container .game-message {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(238, 228, 218, 0.5);
-    z-index: 100;
-    text-align: center;
-    -webkit-animation: fade-in 800ms ease 1200ms;
-    -moz-animation: fade-in 800ms ease 1200ms;
-    animation: fade-in 800ms ease 1200ms;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; }
-    .game-container .game-message p {
-      font-size: 60px;
-      font-weight: bold;
-      height: 60px;
-      line-height: 60px;
-      margin-top: 222px; }
-    .game-container .game-message .lower {
-      display: block;
-      margin-top: 59px; }
-    .game-container .game-message a {
-      display: inline-block;
-      background: #8f7a66;
-      border-radius: 3px;
-      padding: 0 20px;
-      text-decoration: none;
-      color: #f9f6f2;
-      height: 40px;
-      line-height: 42px;
-      margin-left: 9px; }
-      .game-container .game-message a.keep-playing-button {
-        display: none; }
-    .game-container .game-message.game-won {
-      background: rgba(237, 194, 46, 0.5);
-      color: #f9f6f2; }
-      .game-container .game-message.game-won a.keep-playing-button {
-        display: inline-block; }
-    .game-container .game-message.game-won, .game-container .game-message.game-over {
-      display: block; }
+.game-container .game-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(238, 228, 218, 0.5);
+  z-index: 100;
+  text-align: center;
+  -webkit-animation: fade-in 800ms ease 1200ms;
+  -moz-animation: fade-in 800ms ease 1200ms;
+  animation: fade-in 800ms ease 1200ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both; }
+.game-container .game-message p {
+  font-size: 60px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 222px; }
+.game-container .game-message .lower {
+  display: block;
+  margin-top: 59px; }
+.game-container .game-message a {
+  display: inline-block;
+  background: #8f7a66;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 40px;
+  line-height: 42px;
+  margin-left: 9px; }
+.game-container .game-message a.keep-playing-button {
+  display: none; }
+.game-container .game-message.game-won {
+  background: rgba(237, 194, 46, 0.5);
+  color: #f9f6f2; }
+.game-container .game-message.game-won a.keep-playing-button {
+  display: inline-block; }
+.game-container .game-message.game-won, .game-container .game-message.game-over {
+  display: block; }
 
 .grid-container {
   position: absolute;
@@ -210,12 +207,12 @@ hr {
 
 .grid-row {
   margin-bottom: 15px; }
-  .grid-row:last-child {
-    margin-bottom: 0; }
-  .grid-row:after {
-    content: "";
-    display: block;
-    clear: both; }
+.grid-row:last-child {
+  margin-bottom: 0; }
+.grid-row:after {
+  content: "";
+  display: block;
+  clear: both; }
 
 .grid-cell {
   width: 106.25px;
@@ -224,8 +221,8 @@ hr {
   float: left;
   border-radius: 3px;
   background: rgba(238, 228, 218, 0.35); }
-  .grid-cell:last-child {
-    margin-right: 0; }
+.grid-cell:last-child {
+  margin-right: 0; }
 
 .tile-container {
   position: absolute;
@@ -324,68 +321,68 @@ hr {
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform; }
-  .tile .tile-inner {
-    border-radius: 3px;
-    background: #eee4da;
-    text-align: center;
-    font-weight: bold;
-    z-index: 10;
-    font-size: 0px; }
-  .tile.tile-2 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/vanilla-cupcake.jpg);
-    background-size: cover;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-4 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/strawberry-vanilla-cupcake.jpg);
-    background-size: cover;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-8 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/lemon-cupcake.jpg);
-    background-size: cover; }
-  .tile.tile-16 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/red-velvet-cupcake.jpg);
-    background-size: cover; }
-  .tile.tile-32 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/mint-cupcake.jpg);
-    background-size: cover; }
-  .tile.tile-64 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/jumbo-oreo-cupcake.jpg);
-    background-size: cover; }
-  .tile.tile-128 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/birthday-cupcake.jpg);
-    background-size: cover; 
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
-  .tile.tile-256 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/royal-blue-cupcake.jpg);
-    background-size: cover; 
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
-  .tile.tile-512 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/caramel-cupcake.jpg);
-    background-size: cover; 
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
-  .tile.tile-1024 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/pink-champagne-cupcake.jpg);
-    background-size: cover;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
-  .tile.tile-2048 .tile-inner {
-    font-size: 0px; 
-    background-image: url(../img/pumpkin-cupcake.jpg);
-    background-size: cover;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
-  .tile.tile-super .tile-inner {
-    color: #f9f6f2;
-    background: #3c3a32;
-    font-size: 0px; }
+.tile .tile-inner {
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  z-index: 10;
+  font-size: 0px; }
+.tile.tile-2 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/vanilla-cupcake.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+.tile.tile-4 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/strawberry-vanilla-cupcake.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+.tile.tile-8 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/lemon-cupcake.jpg);
+  background-size: cover; }
+.tile.tile-16 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/red-velvet-cupcake.jpg);
+  background-size: cover; }
+.tile.tile-32 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/mint-cupcake.jpg);
+  background-size: cover; }
+.tile.tile-64 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/jumbo-oreo-cupcake.jpg);
+  background-size: cover; }
+.tile.tile-128 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/birthday-cupcake.jpg);
+  background-size: cover; 
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
+.tile.tile-256 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/royal-blue-cupcake.jpg);
+  background-size: cover; 
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
+.tile.tile-512 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/caramel-cupcake.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
+.tile.tile-1024 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/pink-champagne-cupcake.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
+.tile.tile-2048 .tile-inner {
+  font-size: 0px; 
+  background-image: url(../img/pumpkin-cupcake.jpg);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
+.tile.tile-super .tile-inner {
+  color: #f9f6f2;
+  background: #3c3a32;
+  font-size: 0px; }
 
 @-webkit-keyframes appear {
   0% {
@@ -582,50 +579,50 @@ hr {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    .game-container .game-message {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(238, 228, 218, 0.5);
-      z-index: 100;
-      text-align: center;
-      -webkit-animation: fade-in 800ms ease 1200ms;
-      -moz-animation: fade-in 800ms ease 1200ms;
-      animation: fade-in 800ms ease 1200ms;
-      -webkit-animation-fill-mode: both;
-      -moz-animation-fill-mode: both;
-      animation-fill-mode: both; }
-      .game-container .game-message p {
-        font-size: 60px;
-        font-weight: bold;
-        height: 60px;
-        line-height: 60px;
-        margin-top: 222px; }
-      .game-container .game-message .lower {
-        display: block;
-        margin-top: 59px; }
-      .game-container .game-message a {
-        display: inline-block;
-        background: #8f7a66;
-        border-radius: 3px;
-        padding: 0 20px;
-        text-decoration: none;
-        color: #f9f6f2;
-        height: 40px;
-        line-height: 42px;
-        margin-left: 9px; }
-        .game-container .game-message a.keep-playing-button {
-          display: none; }
-      .game-container .game-message.game-won {
-        background: rgba(237, 194, 46, 0.5);
-        color: #f9f6f2; }
-        .game-container .game-message.game-won a.keep-playing-button {
-          display: inline-block; }
-      .game-container .game-message.game-won, .game-container .game-message.game-over {
-        display: block; }
+  .game-container .game-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(238, 228, 218, 0.5);
+    z-index: 100;
+    text-align: center;
+    -webkit-animation: fade-in 800ms ease 1200ms;
+    -moz-animation: fade-in 800ms ease 1200ms;
+    animation: fade-in 800ms ease 1200ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+  .game-container .game-message p {
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 222px; }
+  .game-container .game-message .lower {
+    display: block;
+    margin-top: 59px; }
+  .game-container .game-message a {
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    margin-left: 9px; }
+  .game-container .game-message a.keep-playing-button {
+    display: none; }
+  .game-container .game-message.game-won {
+    background: rgba(237, 194, 46, 0.5);
+    color: #f9f6f2; }
+  .game-container .game-message.game-won a.keep-playing-button {
+    display: inline-block; }
+  .game-container .game-message.game-won, .game-container .game-message.game-over {
+    display: block; }
 
   .grid-container {
     position: absolute;
@@ -633,12 +630,12 @@ hr {
 
   .grid-row {
     margin-bottom: 10px; }
-    .grid-row:last-child {
-      margin-bottom: 0; }
-    .grid-row:after {
-      content: "";
-      display: block;
-      clear: both; }
+  .grid-row:last-child {
+    margin-bottom: 0; }
+  .grid-row:after {
+    content: "";
+    display: block;
+    clear: both; }
 
   .grid-cell {
     width: 57.5px;
@@ -647,8 +644,8 @@ hr {
     float: left;
     border-radius: 3px;
     background: rgba(238, 228, 218, 0.35); }
-    .grid-cell:last-child {
-      margin-right: 0; }
+  .grid-cell:last-child {
+    margin-right: 0; }
 
   .tile-container {
     position: absolute;
