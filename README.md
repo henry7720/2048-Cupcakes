@@ -3,6 +3,6 @@
 I based this off of [Video Game Central](http://videogamecentral.net/test/)'s game, in fact, it uses the exact same images!
 Anyway, I figured that if I showed this to people, they might be able to easily make their own clones!
 
-Here's a hint: go into [`style/main.css`](style/main.css) and find line [`436`](style/main.css#L436).
+Here's a hint: go (in)to [`style/main.css`](style/main.css) and find line [`436`](style/main.css#L436).
 
 Notice how there's a background property? Enjoy!
